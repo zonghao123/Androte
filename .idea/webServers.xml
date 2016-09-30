@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2b9d9eaf-2d83-4d3b-9ac3-d7f39a0abdc8" name="https://git.coding.net/androte/Androte.git">
+        <fileTransfer host="" port="21" password="dff0dfe5dfe4dfeddfe2dfebdfe5df9bdf98df99" username="zy416417@163.com">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

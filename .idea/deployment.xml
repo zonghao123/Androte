@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="https://git.coding.net/androte/Androte.git" uploadOnCheckin="2b9d9eaf-2d83-4d3b-9ac3-d7f39a0abdc8">
+    <serverData>
+      <paths name="https://git.coding.net/androte/Androte.git">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="https://git.coding.net/androte/Androte.git" />
+  </component>
+</project>
