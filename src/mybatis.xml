@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+
+    <typeAliases>
+        <!--
+      通过package, 可以直接指定package的名字， mybatis会自动扫描你指定包下面的javabean,
+      并且默认设置一个别名，默认的名字为非限定类名来作为它的别名。不用每个单独配置了,注意mapper中type别名必须与类名一致
+        -->
+        <!--<typeAlias type="com.howl.ssma.javabean.Admin" alias="admin"/>-->
+        <package name="com.howl.androte.javabean"></package>
+    </typeAliases>
+
+
+
+    <!--已经在spring中配置自动扫描，所以注释掉，具体配置在spring-base中39，40行-->
+    <!--<mappers>-->
+        <!--<mapper resource="com/howl/ssma/javabean/adminMapper.xml"/>-->
+    <!--</mappers>-->
+
+</configuration>

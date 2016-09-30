@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>管理员登录</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center"><i class="material-icons">android</i>Androte</a>
+    </div>
+</nav>
+
+<div class="container" style="margin-top: 160px">
+    <div class="row">
+        <div class="col s4">
+            <!-- Promo Content 1 goes here -->
+        </div>
+        <div class="col s4">
+            <div class="valign-wrapper" style="width: auto">
+                <h5 class="valign">Androte管理员登录</h5>
+            </div>
+        </div>
+        <div class="col s4">
+            <!-- Promo Content 1 goes here -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s3">
+            <!-- Promo Content 1 goes here -->
+        </div>
+        <div class="col s6">
+            <div class="row">
+                <form id="formLogin" class="col s12" action="/admin/login.action" METHOD="post">
+                    <div class="container">
+                        <div class="input-field">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="adminName" name="adminName" type="text" class="validate">
+                            <label for="adminName">用户名</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="adminPwd" name="adminPwd" type="password" class="validate">
+                            <label for="adminPwd">密码</label>
+                        </div>
+                        <a class="waves-effect waves-light btn" id="btnLogin">
+                            <i class="material-icons right">perm_identity</i>登录
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col s3">
+            <!-- Promo Content 3 goes here -->
+        </div>
+
+    </div>
+</div>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/js/materialize.min.js"></script>
+<script type="text/javascript">
+    $("#btnLogin").click(function () {
+
+        if(""==$("#adminName").val().trim()){
+            Materialize.toast('请输入用户名!', 2000, 'rounded')
+        }else if(""==$("#adminPwd").val().trim()){
+            Materialize.toast('请输入密码!', 2000, 'rounded')
+        }else{
+            $("#formLogin").submit();
+        }
+    });
+</script>
+</body>
+</html>

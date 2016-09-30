@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+        <!--namespace设置为运用的Dao层全路径  -->
+    <mapper namespace="com.howl.androte.dao.AdminDao">
+        <!--实体与标的关系-->
+        <resultMap type="Admin" id="admin">
+            <!--id表示主键-->
+            <id property="adminId" column="adminId"></id>
+            <result property="adminName" column="adminName"></result>
+            <result property="adminPwd" column="adminPwd"></result>
+        </resultMap>
+
+        <select id="findByNameAndPwd" parameterType="Admin" resultMap="admin">
+            SELECT a.adminId,a.adminName,a.adminPwd
+            FROM admin a
+            WHERE a.adminName = #{adminName} AND a.adminPwd = #{adminPwd}
+        </select>
+
+        <insert id="insertAdmin" parameterType="Admin">
+            insert into admin(adminName,adminPwd) values(#{adminName},#{adminPwd})
+        </insert>
+
+    </mapper>
